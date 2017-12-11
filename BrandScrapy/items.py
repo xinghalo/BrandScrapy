@@ -19,3 +19,8 @@ class RayliItem(scrapy.Item):
     create_time = scrapy.Field()
     source_place = scrapy.Field()
     attach = scrapy.Field()
+    #story = scrapy.Field()
+    category= scrapy.Field()
+    gongneng = scrapy.Field()
+    xilie = scrapy.Field()
+    url = scrapy.Field()
