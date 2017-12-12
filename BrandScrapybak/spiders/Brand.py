@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-reload(sys)
-sys.setdefaultencoding( "utf-8" )
-
 import scrapy
 from BrandScrapy.items import RayliItem
 from scrapy.spiders import CrawlSpider, Rule

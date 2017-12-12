@@ -8,15 +8,6 @@
 from scrapy import signals
 from scrapy.exceptions import IgnoreRequest
 
-class MyCustomDownloaderMiddleware(object):
-
-    # 黑名单，有的Url有问题、有的url不是目标url
-    black_list = ["http://hzp.rayli.com.cn/silkwhitia/index.html",
-                  "http://hzp.rayli.com.cn/zhuanti/sixianghui04/index.html",]
-
-    def process_request(self, request, spider):
-        if request.url in self.black_list:
-            raise IgnoreRequest()
 
 class BrandscrapySpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -64,3 +55,13 @@ class BrandscrapySpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+class MyCustomDownloaderMiddleware(object):
+
+    # 黑名单，有的Url有问题、有的url不是目标url
+    black_list = ["http://hzp.rayli.com.cn/silkwhitia/index.html",
+                  "http://hzp.rayli.com.cn/zhuanti/sixianghui04/index.html",]
+
+    def process_request(self, request, spider):
+        if request.url in self.black_list:
+            raise IgnoreRequest()
