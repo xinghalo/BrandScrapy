@@ -13,6 +13,24 @@ class BrandscrapyItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
+class NaefuItem(scrapy.Item):
+    # 品牌名称
+    name = scrapy.Field()
+    # 适用年龄
+    age = scrapy.Field()
+    # 品牌故事
+    story = scrapy.Field()
+    # url
+    url = scrapy.Field()
+
+    def csv(self):
+        arr = [self['name'],
+               self['age'],
+               #self['story'],
+               self['url']]
+
+        return ",".join(arr)+"\n"
+
 class RayliItem(scrapy.Item):
     # 品牌中文名（英文名）
     name = scrapy.Field()
