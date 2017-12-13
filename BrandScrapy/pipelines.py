@@ -12,7 +12,7 @@ class BrandscrapyPipeline(object):
 
     def __init__(self):
         #file_name = 'ip.json'
-        file_name = 'nz86.json'
+        file_name = 'nz86-303.json'
         # file_name = 'ip2.json'
         self.file = codecs.open(file_name, 'wb', encoding='utf-8')
 

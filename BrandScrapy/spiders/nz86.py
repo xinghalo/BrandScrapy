@@ -7,7 +7,8 @@ class NZ86Spider(scrapy.Spider):
 
     def start_requests(self):
         url = 'http://www.nz86.com/brands/p'
-        for index in range(1,303):
+        # 最大303
+        for index in range(250,303):
             yield scrapy.Request(url=url+str(index)+'/', callback=self.parse_list)
 
     def parse_list(self, response):
