@@ -13,6 +13,21 @@ class BrandscrapyItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
+class Proxy2Item(scrapy.Item):
+    url = scrapy.Field()
+
+class ProxyItem(scrapy.Item):
+    url = scrapy.Field()
+    proxy = scrapy.Field()
+
+class NZ86Item(scrapy.Item):
+    name = scrapy.Field()
+    url = scrapy.Field()
+    style = scrapy.Field()
+    position = scrapy.Field()
+    age = scrapy.Field()
+
+
 class NaefuItem(scrapy.Item):
     # 品牌名称
     name = scrapy.Field()

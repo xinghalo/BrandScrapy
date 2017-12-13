@@ -11,13 +11,16 @@ import json
 class BrandscrapyPipeline(object):
 
     def __init__(self):
-        self.file = codecs.open('naefu.csv', 'wb', encoding='utf-8')
+        #file_name = 'ip.json'
+        file_name = 'nz86.json'
+        # file_name = 'ip2.json'
+        self.file = codecs.open(file_name, 'wb', encoding='utf-8')
 
     def process_item(self, item, spider):
 
-        #line = json.dumps(dict(item), ensure_ascii=False) + "\n"
-        #self.file.write(line)
-        self.file.write(item.csv())
+        line = json.dumps(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(line)
+        # self.file.write(item.csv())
         return item
 
     def spider_closed(self, spider):

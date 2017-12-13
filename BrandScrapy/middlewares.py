@@ -4,9 +4,36 @@
 #
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
+import random
+import os
+from BrandScrapy.settings import PROXIES
 
 from scrapy import signals
 from scrapy.exceptions import IgnoreRequest
+logger = logging.getLogger(__name__)
+
+
+class RandomUserAgent(object):
+    """Randomly rotate user agents based on a list of predefined ones"""
+
+    def __init__(self, agents):
+        self.agents = agents
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler.settings.getlist('USER_AGENTS'))
+
+    def process_request(self, request, spider):
+        request.headers.setdefault('User-Agent', random.choice(self.agents))
+
+class ProxyMiddleware(object):
+    def process_request(self, request, spider):
+        # proxy = random.choice(PROXIES)
+        # print("*********************************************************************")
+        # print(proxy['url'])
+        # request.meta['proxy'] = proxy['url']
+        pass
 
 class MyCustomDownloaderMiddleware(object):
 
