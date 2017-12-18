@@ -1,6 +1,8 @@
 # BrandScrapy
 
-爬去各个品牌网站的数据，后去品牌特征用于推荐或者NLP处理。
+> 这个项目是为了给推荐系统寻找语料库，包括各大网站常用的品牌标签。算是第一次写爬虫，中间也遇到了不少的坑。在这里特意记录一下，以供参考。
+
+# 爬取内容
 
 ## 瑞丽网 http://hzp.rayli.com.cn/
 
@@ -23,7 +25,9 @@
 
 参考spiders.proxy2, data5u，里面ip有很多国外的，几乎也没有好使的。
 
-
 ## chinasspp http://www.chinasspp.com/
 
-参考spiders.chinasspp，真心喜欢这个网站
+参考spiders.chinasspp，真心喜欢这个网站，没有任何防爬虫限制，感谢感谢！
+
+# 关于Scrapy
+
