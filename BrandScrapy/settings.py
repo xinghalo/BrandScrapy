@@ -18,7 +18,7 @@ BOT_NAME = 'BrandScrapy'
 SPIDER_MODULES = ['BrandScrapy.spiders']
 NEWSPIDER_MODULE = 'BrandScrapy.spiders'
 
-
+LOG_FILE="log.txt"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
 

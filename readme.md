@@ -23,3 +23,7 @@
 
 参考spiders.proxy2, data5u，里面ip有很多国外的，几乎也没有好使的。
 
+
+## chinasspp http://www.chinasspp.com/
+
+参考spiders.chinasspp，真心喜欢这个网站

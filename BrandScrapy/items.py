@@ -13,6 +13,13 @@ class BrandscrapyItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
+class ChinassppItem(scrapy.Item):
+    url = scrapy.Field()
+    name = scrapy.Field()
+    sim = scrapy.Field()
+    story = scrapy.Field()
+    category = scrapy.Field()
+
 class Proxy2Item(scrapy.Item):
     url = scrapy.Field()
 
